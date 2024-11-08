@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.hotel.HotelController">
+   <stylesheets>
+      <URL value="@Style.css" />
+   </stylesheets>
+      <Pane fx:id="loginPane" prefHeight="538.0" prefWidth="755.0" visible="false">
+            <Label layoutX="334.0" layoutY="108.0" text="Usuario" />
+            <TextField fx:id="usuarioField" layoutX="290.0" layoutY="125.0" />
+            <Label layoutX="324.0" layoutY="179.0" text="Contraseña" />
+            <PasswordField fx:id="passwordField" layoutX="290.0" layoutY="196.0" />
+            <Button layoutX="340.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleLogin" text="Entrar" />
+            <Label fx:id="errorLabel" layoutX="220.0" layoutY="300.0" textFill="RED" />
+      </Pane>
+
+      <Pane fx:id="reservaPane" prefHeight="538.0" prefWidth="755.0">
+
+            <DatePicker fx:id="fechaLlegada" editable="false" layoutX="263.0" layoutY="65.0" promptText="Fecha de llegada" />
+            <DatePicker fx:id="fechaSalida" editable="false" layoutX="263.0" layoutY="116.0" promptText="Fecha de salida" />
+            <Button fx:id="habitacionDisponible" layoutX="515.0" layoutY="65.0" mnemonicParsing="false" onAction="#handleMostrarHabitacionesDisponibles" text="Ver Habitaciones disponibles" />
+            <Button fx:id="BReservar" layoutX="552.0" layoutY="111.0" mnemonicParsing="false" onAction="#registrarReserva" prefHeight="34.0" prefWidth="96.0" text="Reservar" textAlignment="CENTER" />
+            <TextField fx:id="nombre" layoutX="74.0" layoutY="65.0" text="Nombre" />
+            <TextField fx:id="apellido" layoutX="74.0" layoutY="115.0" text="Apellido" />
+            <TextField fx:id="correo" layoutX="74.0" layoutY="169.0" text="Correo electronico" />
+            <TextField fx:id="telefono" layoutX="74.0" layoutY="204.0" text="Telefono movil" />
+            <Button fx:id="reservasConfirmadas" layoutX="552.0" layoutY="164.0" mnemonicParsing="false" onAction="#mostrarReservas" prefHeight="34.0" prefWidth="96.0" text="Ver reservas" />
+            <TextArea fx:id="textArea" layoutX="82.0" layoutY="270.0" prefHeight="246.0" prefWidth="584.0" />
+            <ComboBox fx:id="tipo" layoutX="263.0" layoutY="169.0" onAction="#asignarHabitacion" prefWidth="150.0" promptText="Tipo de habitación" />
+            <ComboBox fx:id="numHab" layoutX="263.0" layoutY="204.0" prefWidth="150.0" promptText="Habitación" />
+      <Button fx:id="eliminar" layoutX="548.0" layoutY="217.0" mnemonicParsing="false" text="Eliminar reserva" />
+
+      </Pane>
+
+</AnchorPane>

@@ -1,0 +1,11 @@
+#loginPane {
+    -fx-background-image: url("ImagenLogin.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+#reservaPane {
+    -fx-background-image: url("ImagenHotel.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
